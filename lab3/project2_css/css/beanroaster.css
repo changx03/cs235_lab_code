@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: BlanchedAlmond;
+    text-align: center;
+	width:622px;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+}
+
+h3 {
+    text-align: center;
+    color: brown;
+}
+
+table {
+    width:100%;
+}
+
+p {
+	text-align: center;
+	color: brown
+}
+
+footer {
+	width:622px;
+	background-color: BlanchedAlmond;
+}
+
+.textlabel{
+    font-style: italic
+}
+
+.majordiv{
+    width:622px;
+}
+
+.editbutton{
+    background-color: white
+}
+
+#fullpage { 
+    background: #8c7165;
+    color: white;
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+#tdldimglabel{
+    width: 15%
+}
+
+#tdldimginput{
+    width: 61%
+}
+
+#tdpointermode{
+    width: 24%;
+	text-align: center
+}
+
+#uploadImage{
+    float:left
+}
+
+#dvColoursample{
+    width:622px;
+	height:302px;
+	position: relative;
+	background-color: #8c7165;
+}
+
+#cnvActiveImage{
+	border: 1px solid #d3d3d3;
+	position: absolute; 
+	left: 0; 
+	top: 0; 
+	z-index: 0
+}
+
+#cnvZoomPixels{
+    border:1px solid #d3d3d3;
+    position: absolute;
+    left: 470px;
+    top: 0;
+    z-index: 0
+}
+
+#dvSampleFrame{
+    border:1px solid #d3d3d3;
+    height:150px;
+    width:150px;
+    background-color:#FFFFFF;
+    position: absolute;
+    left: 470px;
+    top: 150px;
+    z-index: 0;
+}
+
+#dvActiveColour{
+    height:100px;
+    width:102px;
+    background-color:#FFFFFF;
+    position: absolute;
+    left: 495px;
+    top: 177px;
+    z-index: 0;
+}
+
+#tdcolrlabel{
+    width: 80%;
+}
+#tdnewcopybtns{
+    width: 20%;
+    text-align: left
+}
+
+#dvcomments{
+	width:622px;
+    text-align: center
+}
+
+#imgPreview{
+    image-orientation: from-image; 
+    display:none
+}

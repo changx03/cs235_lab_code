@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee Bean Roast Colour Picker</title>
+	<link rel="stylesheet" type="text/css" href="css/beanroaster.css">
+    <script src="./js/beanroaster.js"></script>
+</head>
+<body onload="loadDefaultImage();">
+<div id="fullpage">
+    <header>
+        <h1>Roasted Coffee Bean Colour Picker</h1>
+   		<h3>Load an image of roasted coffee beans from the "img" subfolder. Click on a part of a coffee bean that has a colour representative of that bean (i.e., avoid any shiny parts) or in the colour sample window to select a colour and identify the roasting type.</h3>
+	</header>
+	<main>
+        <div id="SelectImage" style="width:622px;">
+            <table style="width:100%">
+                <tr>
+                    <td width="15%"><em>Load image:</em></td>
+                    <td width="61%"><input style="float:left;" id="uploadImage" type="file" name="myPhoto" onchange="loadImageFile();" /></td>
+                    <td width="24%" align="center">
+                        <div id="pointerMode"></div>
+                    </td> 
+                </tr>
+            </table>
+        </div>
+        <div style="width:622px;height:302px;position: relative;background-color: #ffffff;">
+            <canvas id="cnvActiveImage" width="470" height="300" style="border:1px solid #d3d3d3;position: absolute; left: 0; top: 0; z-index: 0;">Your browser does not support the HTML5 canvas tag.</canvas>
+            <canvas id="cnvZoomPixels" width="150" height="150" style="border:1px solid #d3d3d3;position: absolute; left: 470px; top: 0; z-index: 0;">Your browser does not support the HTML5 canvas tag.</canvas>
+            <div id="dvSampleFrame" style="border:1px solid #d3d3d3;height:150px;width:150px;background-color:#FFFFFF;position: absolute; left: 470px; top: 150px; z-index: 0;"></div>
+            <div id="dvActiveColour" data-colour="#FFFFFF,255,255,255" onClick="cellSampleClick(this.getAttribute('data-colour'));" style="height:100px;width:102px;background-color:#FFFFFF;position: absolute; left: 495px; top: 177px; z-index: 0;"></div>
+        </div>
+        <div id="tblButtons" style="width:622px;">
+             <table style="width:100%">
+                 <tr>
+                     <td width="80%"><em>Coffee Bean Roast Colour:</em></td>
+                     <td width="20%" align="left">
+                         <button title="New comment" style="background-color:white" onClick="clearUserComments()"><img src="./img/new_note_button.png"/></button>
+                         <button title="Copy comment to clipboard" style="background-color:white" onClick="copyComments()"><img src="./img/copy_note_button.png"/></button>
+                     </td>
+                 </tr>
+             </table>
+         </div>
+         <div id="dvcomments" style="width:622px;" align="center">
+             <textarea id="userComments" rows="6" cols="75"></textarea>
+         </div>
+         <div id="dvResultsTable" style="width:622px;">
+         </div>
+         <br />
+       </main>
+       <footer id="dvInformation">
+		<p>
+			<small>-----</small>
+			<br />
+			<small>To see the spectrum of coffee bean roast colours, see the <a href="https://en.wikipedia.org/wiki/Coffee_roasting#Roasts" target="_blank">Wikipedia page for "Coffee Roasting"</a>.</small>
+			<br /><br />
+			<small>To view a wide array of royalty-free images of coffee beans, please see: <a href="https://unsplash.com/s/photos/coffee-beans" target="_blank">Unsplash.com</a>.</small>
+			<br /><br />
+			<small>For <b><i>Fairtrade</i></b> Coffee in Aotearoa New Zealand, visit <a href="https://fairtrade.org.nz/en-nz/fairtrade-products/coffee" target="_blank">the Fairtrade website</a> for further information.</small>
+			<br /><br />
+           </p>
+       </footer>
+       <img crossorigin="anonymous" src="Nothing" id="imgPreview" onload="loadCanvas();" alt="Image preview" style="image-orientation: from-image; display:none" />
+</div>
+</body>
+</html>

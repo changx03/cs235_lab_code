@@ -1,0 +1,12 @@
+label {
+  font-weight: bold;
+}
+
+.title{
+    font-size: 24px;
+}
+
+#submit {
+  background-color: darkcyan;
+  color: white;
+}

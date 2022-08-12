@@ -35,7 +35,7 @@ def welcome():
 def computer_pick_number(even, prime):
     print(PICK_NUMBER)
     number = pickANumber(even, prime)
-    return number;
+    return number
 
 def user_guess(even, prime):
     try:

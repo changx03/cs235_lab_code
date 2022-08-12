@@ -6,7 +6,8 @@ def checkIsEven(number):
 
 def checkIsPrime(number):
     #This function isn't sure how to check if a number is prime, so it simply excludes even numbers.
-    if checkIsEven(number):
-        return False
+    for i in range(2,number):
+        if (number%i) == 0:
+            return False
     return True
 

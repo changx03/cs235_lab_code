@@ -1,0 +1,19 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Zealand Prime Ministers</title>
+    <link rel="stylesheet" href={{ url_for("static", filename="css/styles.css")
+    }}>
+  </head>
+  <body>
+    <nav>
+      <a href={{ url_for("people_blueprint.home") }}>Home</a>
+      <a href={{ url_for("people_blueprint.list_people") }}>List</a>
+      <a href={{ url_for("people_blueprint.find_person") }}>Search</a>
+    </nav>
+    <h1>New Zealand Prime Ministers</h1>
+    <main>{% block content %} {% endblock %}</main>
+  </body>
+</html>

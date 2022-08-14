@@ -1,0 +1,8 @@
+{% extends 'layout.html' %} {% block content %}
+
+<div>
+  <img src={{ url_for("static", filename=img_url) }} alt="{{ firstname + ' ' +
+  lastname }}" />
+  <p>{{ firstname }} {{ lastname }}</p>
+</div>
+{% endblock %}

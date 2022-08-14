@@ -1,0 +1,25 @@
+{% extends 'layout.html' %} {% block content %}
+
+<div>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+    {% for person in people %}
+    <tr>
+      <td>{{ person.id }}</td>
+      <td>{{ person.firstname }}</td>
+      <td>{{ person.lastname }}</td>
+      <td>
+        <a
+          href={{ url_for('people_blueprint.person_view', person_id = person.id) }}
+          >View</a
+        >
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

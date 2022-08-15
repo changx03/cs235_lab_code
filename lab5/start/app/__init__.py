@@ -34,7 +34,7 @@ def create_app():
     csrf.init_app(app)
 
     # Load configuration from `config.py`
-    # Task 2: Add your code here
+    app.config.from_object('config.DevConfig')
 
     # Load data
     people = load_data()

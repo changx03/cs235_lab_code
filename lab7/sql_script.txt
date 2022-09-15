@@ -1,0 +1,11 @@
+-- Only show 10 items
+SELECT * FROM articles LIMIT 10;
+
+-- Pagination example: Each page has 10 items, we want the 3rd page
+SELECT * FROM articles ORDER BY date LIMIT 10 OFFSET 20;
+
+-- Search items that the title contains 'Covid 19'
+SELECT * FROM articles WHERE title LIKE '%Covid 19%'
+
+-- Left join example: Finding all comments by 'mjackson'
+SELECT * FROM comments LEFT JOIN users ON users.id = comments.user_id WHERE users.user_name = 'mjackson';

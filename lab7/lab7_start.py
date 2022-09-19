@@ -1,13 +1,8 @@
-"""Startup code for Lab 6 SQLite database
+"""Startup code for Lab 7 SQLAlchemy
 
 Author: Luke Chang (xcha011@aucklanduni.ac.nz)
-Date: 16/09/2022
+Date: 19/09/2022
 
-NOTE:
-- `sqlite3` is a built-in library, you do not need to create a virtual environment 
-to run this code.
-- Note that the location of the database matters, the root directory should be 
-'cs235_lab_code/lab6'.
 """
 import os
 import sqlite3

@@ -1,4 +1,4 @@
-"""Startup code for Lab 7 SQLite database
+"""Startup code for Lab 6 SQLite database
 
 Author: Luke Chang (xcha011@aucklanduni.ac.nz)
 Date: 16/09/2022
